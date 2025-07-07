@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, Download, FileText } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import * as THREE from 'three';
@@ -218,6 +218,23 @@ export const Contact = () => {
     });
   };
 
+  const handleResumeDownload = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Alex_Chen_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Show download notification
+    toast({
+      variant: "success",
+      title: "Resume Downloaded! 📄",
+      description: "Thank you for your interest. The resume has been downloaded successfully.",
+    });
+  };
+
   return (
     <section id="contact" className="py-20 px-4 relative overflow-hidden">
       {/* 3D Background */}
@@ -334,6 +351,37 @@ export const Contact = () => {
                   </div>
                 </motion.div>
               ))}
+
+              {/* Resume Download Section */}
+              <motion.div
+                className="pt-6 border-t border-gray-700"
+                initial={{ opacity: 0, y: 20, rotateY: -20 }}
+                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <h4 className="text-lg font-semibold text-white mb-4">Quick Access</h4>
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.02,
+                    boxShadow: "0 10px 30px rgba(0, 255, 255, 0.3)"
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Button
+                    onClick={handleResumeDownload}
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform flex items-center justify-center gap-3"
+                  >
+                    <FileText className="w-5 h-5" />
+                    <span>Download Resume</span>
+                    <Download className="w-4 h-4" />
+                  </Button>
+                </motion.div>
+                <p className="text-gray-400 text-sm mt-2 text-center">
+                  Get detailed information about my experience and skills
+                </p>
+              </motion.div>
             </div>
 
             <motion.div 
