@@ -26,6 +26,7 @@ export const Header = () => {
   const navItems = [
     { name: 'About', id: 'about' },
     { name: 'Experience', id: 'experience' },
+    { name: 'Certifications', id: 'certifications' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
     { name: 'Contact', id: 'contact' }

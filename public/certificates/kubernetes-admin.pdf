@@ -1,0 +1,53 @@
+Certified Kubernetes Administrator (CKA)
+
+Certificate of Achievement
+
+This is to certify that
+
+ALEX CHEN
+
+has successfully passed the Certified Kubernetes Administrator (CKA) exam, demonstrating the skills, knowledge, and competency to perform the responsibilities of a Kubernetes Administrator.
+
+Credential ID: CKA-2023-678
+Issue Date: July 25, 2023
+Valid Until: July 25, 2026
+
+Cloud Native Computing Foundation (CNCF)
+Linux Foundation
+
+Exam Domains and Competencies:
+- Cluster Architecture, Installation & Configuration (25%)
+- Workloads & Scheduling (15%)
+- Services & Networking (20%)
+- Storage (10%)
+- Troubleshooting (30%)
+
+Skills Validated:
+- Install and configure Kubernetes clusters
+- Manage cluster components and nodes
+- Deploy and manage applications
+- Configure networking and security
+- Monitor cluster health and performance
+- Troubleshoot cluster and application issues
+- Implement backup and restore procedures
+
+Technical Areas Covered:
+- Kubernetes Architecture and Components
+- Pod and Container Management
+- Services and Ingress Controllers
+- ConfigMaps and Secrets
+- Persistent Volumes and Storage Classes
+- RBAC and Security Policies
+- Cluster Networking (CNI)
+- Monitoring and Logging
+- Cluster Maintenance and Upgrades
+
+Tools and Technologies:
+- kubectl command-line tool
+- kubeadm for cluster setup
+- etcd backup and restore
+- Container runtimes (Docker, containerd)
+- Network plugins (Calico, Flannel)
+- Monitoring tools (Prometheus, Grafana)
+
+This certification demonstrates the ability to design, install, configure, and manage production-grade Kubernetes clusters.

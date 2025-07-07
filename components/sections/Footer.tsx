@@ -36,7 +36,7 @@ export const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <div className="space-y-2">
-              {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((link, index) => (
+              {['About', 'Experience', 'Certifications', 'Skills', 'Projects', 'Contact'].map((link, index) => (
                 <motion.a
                   key={index}
                   href={`#${link.toLowerCase()}`}
