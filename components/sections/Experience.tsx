@@ -130,27 +130,27 @@ export const Experience = () => {
 
   const experiences = [
     {
-      title: "AI Research Assistant",
-      company: "University AI Lab",
-      duration: "Jan 2024 - Present",
-      location: "Remote",
+      title: "Vibe Coding",
+      company: "Science Galeery, Bengaluru",
+      duration: "March - 2025",
+      location: "Bengaluru",
       description: "Working on natural language processing projects and machine learning model optimization.",
       icon: <Code className="w-5 h-5" />,
-      technologies: ["Python", "TensorFlow", "OpenAI API", "Research"]
+      technologies: ["Python", "TensorFlow", "OpenAI API", "React"]
     },
     {
-      title: "Frontend Developer",
-      company: "Freelance Projects",
-      duration: "Sep 2023 - Dec 2023",
-      location: "Remote",
-      description: "Built responsive web applications for local businesses using modern frameworks.",
+      title: "Hackathon",
+      company: "CK College Of Enginnering & Technology",
+      duration: "April 2025",
+      location: "Cuddalore",
+      description: "Built responsive web applications for detecting credit card fraud transaction and got 2nd prize",
       icon: <Users className="w-5 h-5" />,
-      technologies: ["React", "Next.js", "TailwindCSS", "TypeScript"]
+      technologies: ["GitHub", "Python", "Flask", "TensorFlow"]
     },
     {
       title: "Open Source Contributor",
       company: "Various Projects",
-      duration: "Jun 2023 - Present",
+      duration: "August 2024",
       location: "Global",
       description: "Contributing to open-source AI and web development projects on GitHub.",
       icon: <Award className="w-5 h-5" />,
@@ -158,12 +158,12 @@ export const Experience = () => {
     },
     {
       title: "Hackathon Participant",
-      company: "TechCrunch Disrupt",
+      company: "Arunai Engineering College of Technology",
       duration: "Mar 2023",
-      location: "San Francisco",
-      description: "Developed an AI-powered legal reasoning chatbot that won 2nd place.",
+      location: "Thiruvanamalai",
+      description: "Developed an web application to detect the fake news by using ML algorithms",
       icon: <Zap className="w-5 h-5" />,
-      technologies: ["GPT-4", "React", "FastAPI", "Legal Tech"]
+      technologies: ["GPT-4", "React", "FastAPI", "Legal Tech","Stackblitz"]
     }
   ];
 

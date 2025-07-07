@@ -62,8 +62,8 @@ export const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 rounded-lg"></div>
                   <div className="absolute inset-4 rounded-lg overflow-hidden">
                     <img
-                      src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="Alex Chen - AI Developer"
+                      src="/about.png"
+                      alt="Dhashnamoorthy  - AI Developer"
                       className="w-full h-full object-cover rounded-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg"></div>
@@ -75,7 +75,7 @@ export const About = () => {
                       viewport={{ once: true }}
                     >
                       <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3 border border-cyan-500/30">
-                        <p className="text-cyan-300 text-sm font-semibold">AI & Web Developer</p>
+                        <p className="text-cyan-300 text-sm font-semibold">AI Web Developer</p>
                         <p className="text-white text-xs">Building the future with code</p>
                       </div>
                     </motion.div>
@@ -93,7 +93,7 @@ export const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-white mb-4">
-              Hey there! I'm <span className="text-cyan-400">Alex Chen</span>
+              Hey there! I'm <span className="text-cyan-400">Dhashnamoorthy V</span>
             </h3>
             
             <motion.p 

@@ -7,22 +7,14 @@ import { ExternalLink, Github, Play } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
-    {
-      title: "AI Legal Reasoning Chatbot",
-      description: "Advanced chatbot using GPT-4 for legal document analysis and reasoning. Features real-time case law lookup and intelligent legal advice generation.",
-      image: "https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["GPT-4", "React", "FastAPI", "PostgreSQL"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      featured: true
-    },
+    
     {
       title: "Real-time Weather Intelligence",
       description: "Comprehensive weather dashboard with ML-powered forecasting, climate pattern analysis, and personalized weather insights.",
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "D3.js", "Python", "Weather API"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/Dhashnaa",
+      demo: "https://dhashna.netlify.app",
       featured: true
     },
     {
@@ -30,8 +22,8 @@ export const Projects = () => {
       description: "Creative platform for AI-powered image generation with custom prompts, style transfer, and batch processing capabilities.",
       image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["DALL-E API", "Next.js", "TailwindCSS", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/Dhashnaa",
+      demo: "https://dhashnaaa.vercel.app",
       featured: false
     },
     {
@@ -39,7 +31,7 @@ export const Projects = () => {
       description: "Dynamic content management system for portfolios with AI-powered content suggestions and automated SEO optimization.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Firebase", "React", "OpenAI", "Analytics"],
-      github: "https://github.com",
+      github: "https://github.com/Dhashnaa",
       demo: "https://demo.com",
       featured: false
     },
@@ -48,7 +40,7 @@ export const Projects = () => {
       description: "Real-time cryptocurrency tracking with advanced analytics, portfolio management, and ML-based price prediction models.",
       image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Chart.js", "WebSocket", "CoinGecko API"],
-      github: "https://github.com",
+      github: "https://github.com/Dhashnaa",
       demo: "https://demo.com",
       featured: false
     },
@@ -57,7 +49,7 @@ export const Projects = () => {
       description: "Intelligent blog creation platform that generates SEO-optimized content, suggests topics, and automates publishing workflows.",
       image: "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["GPT-3.5", "Next.js", "MongoDB", "Vercel"],
-      github: "https://github.com",
+      github: "https://github.com/Dhashnaa",
       demo: "https://demo.com",
       featured: false
     }
@@ -164,7 +156,7 @@ export const Projects = () => {
             variant="outline"
             className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 text-lg font-semibold transition-all duration-300"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Dhashnaa" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
             </a>

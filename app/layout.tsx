@@ -6,23 +6,23 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Alex Chen - AI & Web Developer',
+  title: 'Dhashnamoorthy  - AI & Web Developer',
   description: 'Aspiring AI enthusiast & web developer building intelligent interfaces. Portfolio showcasing projects in machine learning, web development, and innovative tech solutions.',
   keywords: ['AI Developer', 'Web Developer', 'Machine Learning', 'React', 'Next.js', 'Portfolio'],
-  authors: [{ name: 'Alex Chen' }],
-  creator: 'Alex Chen',
-  publisher: 'Alex Chen',
+  authors: [{ name: 'Dhashnamoorthy ' }],
+  creator: 'Dhashnamoorthy ',
+  publisher: 'Dhashnamoorthy ',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://alexchen.dev',
-    title: 'Alex Chen - AI & Web Developer',
+    title: 'Dhashnamoorthy  - AI & Web Developer',
     description: 'Aspiring AI enthusiast & web developer building intelligent interfaces.',
-    siteName: 'Alex Chen Portfolio',
+    siteName: 'Dhashnamoorthy  Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alex Chen - AI & Web Developer',
+    title: 'Dhashnamoorthy  - AI & Web Developer',
     description: 'Aspiring AI enthusiast & web developer building intelligent interfaces.',
     creator: '@alexchen',
   },

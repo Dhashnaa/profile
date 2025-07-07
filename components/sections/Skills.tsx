@@ -119,8 +119,8 @@ export const Skills = () => {
           <h3 className="text-2xl font-bold text-white mb-8">Also Experienced With</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'AWS', 'Vercel', 'Figma', 'VS Code', 'Jupyter', 'Pandas', 
-              'NumPy', 'Flask', 'Express', 'GraphQL', 'Jest', 'Cypress'
+              'Azure', 'Vercel',' Bolt', 'VS Code', 'Jupyter', 'Pandas', 
+              'NumPy', 'Flask', 'Stackblitz', 'GraphQL', 'Streamlit', 'Cypress'
             ].map((tech, index) => (
               <motion.span
                 key={index}
