@@ -221,8 +221,8 @@ export const Contact = () => {
   const handleResumeDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Alex_Chen_Resume.pdf';
+    link.href = '/Resume.pdf';
+    link.download = 'Dhashnamoorthy_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -309,9 +309,9 @@ export const Contact = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               
               {[
-                { icon: Mail, label: "Email", value: "alex.chen@email.com", color: "cyan" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", color: "pink" },
-                { icon: MapPin, label: "Location", value: "San Francisco, CA", color: "cyan" }
+                { icon: Mail, label: "Email", value: "dhashnamoorthyv@gmail.com", color: "cyan" },
+                { icon: Phone, label: "Phone", value: "+91 (934) 287-7540", color: "pink" },
+                { icon: MapPin, label: "Location", value: "Cuddalore, Tamil Nadu", color: "cyan" }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
@@ -406,8 +406,8 @@ export const Contact = () => {
                 />
                 <div className="absolute inset-4 rounded-full overflow-hidden">
                   <img
-                    src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Alex Chen - Contact"
+                    src="/contact.jpg"
+                    alt="Dhashnamoorthy  - Contact"
                     className="w-full h-full object-cover rounded-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-full"></div>

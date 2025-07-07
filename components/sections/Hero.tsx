@@ -200,7 +200,7 @@ export const Hero = () => {
                 }}
                 transition={{ duration: 0.5 }}
               >
-                AC
+                DP
               </motion.div>
             </div>
           </motion.div>
@@ -227,7 +227,7 @@ export const Hero = () => {
       {/* Social Links */}
       <div className="absolute top-24 right-8 flex gap-4 z-20">
         <motion.a
-          href="https://github.com"
+          href="https://github.com/Dhashnaa"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full bg-black/20 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:bg-cyan-500/10"
@@ -241,7 +241,7 @@ export const Hero = () => {
           <Github className="w-6 h-6 text-cyan-400" />
         </motion.a>
         <motion.a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/dhashnamoorthy-v-769a7027b/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full bg-black/20 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:bg-cyan-500/10"
@@ -255,7 +255,7 @@ export const Hero = () => {
           <Linkedin className="w-6 h-6 text-cyan-400" />
         </motion.a>
         <motion.a
-          href="mailto:alex.chen@email.com"
+          href="mailto:dhashnamoorthyv@gmail.com"
           className="p-3 rounded-full bg-black/20 backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:bg-cyan-500/10"
           whileHover={{ 
             scale: 1.1,
