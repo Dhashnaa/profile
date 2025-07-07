@@ -60,16 +60,24 @@ export const About = () => {
               <Card className="relative overflow-hidden bg-gradient-to-br from-gray-900/50 to-black/50 border-cyan-500/30 backdrop-blur-sm">
                 <div className="aspect-square relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 rounded-lg"></div>
-                  <div className="absolute inset-4 bg-gray-800 rounded-lg flex items-center justify-center">
+                  <div className="absolute inset-4 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Alex Chen - AI Developer"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg"></div>
                     <motion.div 
-                      className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold text-black"
-                      whileHover={{ 
-                        scale: 1.1,
-                        rotate: 360
-                      }}
-                      transition={{ duration: 0.5 }}
+                      className="absolute bottom-4 left-4 right-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
                     >
-                      AI
+                      <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3 border border-cyan-500/30">
+                        <p className="text-cyan-300 text-sm font-semibold">AI & Web Developer</p>
+                        <p className="text-white text-xs">Building the future with code</p>
+                      </div>
                     </motion.div>
                   </div>
                 </div>

@@ -5,11 +5,13 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { useToast } from '@/hooks/use-toast';
 import * as THREE from 'three';
 
 export const Contact = () => {
+  const { toast } = useToast();
   const mountRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene>();
   const rendererRef = useRef<THREE.WebGLRenderer>();
@@ -20,6 +22,8 @@ export const Contact = () => {
     email: '',
     message: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -166,10 +170,45 @@ export const Contact = () => {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Show success notification
+      toast({
+        variant: "success",
+        title: "Message Sent Successfully! ✨",
+        description: "Thank you for reaching out! I'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+
+      // Simulate notification to receiver (in real app, this would be handled by backend)
+      console.log('📧 New message received:', {
+        from: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: new Date().toISOString()
+      });
+
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Failed to Send Message",
+        description: "Something went wrong. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -317,17 +356,23 @@ export const Contact = () => {
                     scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                   }}
                 />
-                <div className="absolute inset-4 bg-gray-800 rounded-full flex items-center justify-center">
+                <div className="absolute inset-4 rounded-full overflow-hidden">
+                  <img
+                    src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="Alex Chen - Contact"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-full"></div>
                   <motion.div 
-                    className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-pink-500 rounded-full flex items-center justify-center text-3xl font-bold text-black"
-                    whileHover={{ 
-                      scale: 1.1,
-                      rotate: 360,
-                      boxShadow: "0 0 50px rgba(0, 255, 255, 0.5)"
-                    }}
-                    transition={{ duration: 0.5 }}
+                    className="absolute bottom-2 left-2 right-2"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    viewport={{ once: true }}
                   >
-                    AC
+                    <div className="bg-black/50 backdrop-blur-sm rounded-lg p-2 border border-cyan-500/30 text-center">
+                      <p className="text-cyan-300 text-xs font-semibold">Let's Connect!</p>
+                    </div>
                   </motion.div>
                 </div>
               </div>
@@ -380,6 +425,7 @@ export const Contact = () => {
                           className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400"
                           placeholder={field.placeholder}
                           required
+                          disabled={isSubmitting}
                         />
                       </motion.div>
                     </motion.div>
@@ -407,6 +453,7 @@ export const Contact = () => {
                         className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400 resize-none"
                         placeholder="Tell me about your project..."
                         required
+                        disabled={isSubmitting}
                       />
                     </motion.div>
                   </motion.div>
@@ -420,18 +467,32 @@ export const Contact = () => {
                   >
                     <motion.div
                       whileHover={{ 
-                        scale: 1.05,
-                        rotateY: 5,
-                        boxShadow: "0 10px 30px rgba(0, 255, 255, 0.4)"
+                        scale: isSubmitting ? 1 : 1.05,
+                        rotateY: isSubmitting ? 0 : 5,
+                        boxShadow: isSubmitting ? "none" : "0 10px 30px rgba(0, 255, 255, 0.4)"
                       }}
-                      whileTap={{ scale: 0.95 }}
+                      whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                     >
                       <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 text-lg font-semibold transition-all duration-300 transform"
+                        disabled={isSubmitting}
+                        className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 text-lg font-semibold transition-all duration-300 transform disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <Send className="w-5 h-5 mr-2" />
-                        Send Message
+                        {isSubmitting ? (
+                          <>
+                            <motion.div
+                              className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full"
+                              animate={{ rotate: 360 }}
+                              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                            />
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5 mr-2" />
+                            Send Message
+                          </>
+                        )}
                       </Button>
                     </motion.div>
                   </motion.div>
