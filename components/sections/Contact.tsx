@@ -221,7 +221,7 @@ export const Contact = () => {
   const handleResumeDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/Resume.pdf';
+    link.href = '/resume.pdf';
     link.download = 'Dhashnamoorthy_Resume.pdf';
     document.body.appendChild(link);
     link.click();
