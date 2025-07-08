@@ -221,7 +221,7 @@ export const Contact = () => {
   const handleResumeDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/Resume.pdf';
+    link.href = '/resume.pdf';
     link.download = 'Dhashnamoorthy_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -370,12 +370,18 @@ export const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Button
-                    onClick={handleResumeDownload}
+                    asChild
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform flex items-center justify-center gap-3"
                   >
-                    <FileText className="w-5 h-5" />
-                    <span>Download Resume</span>
-                    <Download className="w-4 h-4" />
+                    <a
+                      href="/Resume.pdf"
+                      download="Dhashnamoorthy_Resume.pdf"
+                      onClick={handleResumeDownload}
+                    >
+                      <FileText className="w-5 h-5" />
+                      <span>Download Resume</span>
+                      <Download className="w-4 h-4" />
+                    </a>
                   </Button>
                 </motion.div>
                 <p className="text-gray-400 text-sm mt-2 text-center">
