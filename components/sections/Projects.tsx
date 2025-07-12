@@ -13,17 +13,17 @@ export const Projects = () => {
       description: "Comprehensive weather dashboard with ML-powered forecasting, climate pattern analysis, and personalized weather insights.",
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "D3.js", "Python", "Weather API"],
-      github: "https://github.com/Dhashnaa",
-      demo: "https://dhashna.netlify.app",
+      github: "https://github.com/Dhashnaa/aero-weather-alerts",
+      demo: "https://aero-weather-alerts.lovable.app/",
       featured: true
     },
     {
-      title: "AI Image Generator Studio",
-      description: "Creative platform for AI-powered image generation with custom prompts, style transfer, and batch processing capabilities.",
+      title: "Solvex-AI Chatbot",
+      description: "An AI chatbot that precisely solves queries, extracts data from files and URLs, and delivers instant, intelligent answers.",
       image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["DALL-E API", "Next.js", "TailwindCSS", "Stripe"],
-      github: "https://github.com/Dhashnaa",
-      demo: "https://dhashnaaa.vercel.app",
+      technologies: ["Open-Router API", "Next.js", "TailwindCSS", "Subabase"],
+      github: "https://github.com/Dhashnaa/night-code-scribe",
+      demo: "https://solvex-taupe.vercel.app/",
       featured: false
     },
     {
